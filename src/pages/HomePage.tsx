@@ -1,38 +1,25 @@
-import { useQuery } from "react-query";
-import getData1 from "../api/getData1";
-import getData2 from "../api/getData2";
 import ListThing from "../component/ListThing";
-
 
 function HomePage() {
 
-  const dummyQuery = useQuery(
-    "dummy",
-    async () => {
-      console.log("QUERY")
-      const getData1Fetch = getData1({
-        id: 5,
-      });
-      const getData2Fetch = getData2({
-        id: 6,
-      });
-      console.log("SENT");
+  const myFunc = async () => {
+      const getDataFetch1 = Promise.resolve(["hello", "world"])
+      const getDataFetch2 = Promise.resolve([{ id: 1 }, { id: 2 }])
 
       const [data1, data2] = await Promise.all([
-        getData1Fetch, getData2Fetch
+        getDataFetch1, getDataFetch2 
       ]);
 
-      console.log("RESOLVED")
       const x: string[] = data2.map((data) => {
         return data.id.toString();
-      })
-      console.log(data1, x);
-    },
-    {
-      enabled: true,
-      refetchOnWindowFocus: false,
-    }
-  )
+      });
+
+      const y: string[] = data1.map((data) => {
+        return data.toString();
+      });
+
+      return { x, y };
+  }
 
   const mylist: React.ReactNode[] = [
     <div>hello</div>,
