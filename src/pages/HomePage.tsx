@@ -3,7 +3,7 @@ import MyList from "../component/MyList";
 
 function HomePage() {
 
-  const myFunc = async () => {
+  async function myUnusedFunction() {
       const getDataFetch1 = Promise.resolve(["hello", "world"])
       const getDataFetch2 = Promise.resolve([{ id: 1 }, { id: 2 }])
 

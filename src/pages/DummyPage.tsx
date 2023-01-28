@@ -1,4 +1,7 @@
 
+/**
+ * Uncommenting this function will allows TSC to resolve the Promise.all() error
+ */
 /*
 function FixPromiseError() {
   return Promise.resolve("all better now :)");
