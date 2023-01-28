@@ -1,4 +1,5 @@
-import ListThing from "../component/ListThing";
+import { ReactNode } from "react";
+import MyList from "../component/MyList";
 
 function HomePage() {
 
@@ -10,18 +11,18 @@ function HomePage() {
         getDataFetch1, getDataFetch2 
       ]);
 
-      const x: string[] = data2.map((data) => {
+      const x = data2.map((data) => {
         return data.id.toString();
       });
 
-      const y: string[] = data1.map((data) => {
+      const y = data1.map((data) => {
         return data.toString();
       });
 
       return { x, y };
   }
 
-  const mylist: React.ReactNode[] = [
+  const myNodeArray: ReactNode[] = [
     <div>hello</div>,
     <div>world</div>,
     "hello",
@@ -31,7 +32,7 @@ function HomePage() {
   return (
     <div>
       <h1>Home Page</h1>
-      <ListThing columns={mylist} />
+      <MyList columnsCurrent={myNodeArray}/>
     </div>
   );
 }
