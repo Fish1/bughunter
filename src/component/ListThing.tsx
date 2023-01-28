@@ -4,12 +4,16 @@ export interface ListThingProps {
 
 function ListThing(props: ListThingProps) {
   const { columns } = props;
+
   return (
     <div>
       {
         columns.map((column, index) => {
+
+          const badReactNodeString = column?.toString();
+
           return (
-            <div key={`${column?.toString()} ${index.toString()}`}>
+            <div key={index.toString()}>
               {column}
             </div>
           )

@@ -3,9 +3,6 @@
     "target": "es6",
     "useDefineForClassFields": true,
     "lib": ["dom", "dom.iterable", "esNext"],
-    "types": [
-      "vite/client",
-    ],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
