@@ -20,7 +20,6 @@ function MyList(props: ListThingProps) {
            * 3. Remove {column} from inside the div
            */
           const brokenString = column?.toString();
-          console.log(brokenString);
 
           return (
             <div key={index}>
