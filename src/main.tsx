@@ -7,4 +7,4 @@ async function myUnusedFunction() {
   return { y };
 }
 
-export default myUnusedFunction();
+export default myUnusedFunction;
