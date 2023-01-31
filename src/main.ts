@@ -3,5 +3,3 @@ async function myUnusedFunction() {
   const [data1] = await Promise.all([fetch1]);
   data1.length;
 }
-
-export default myUnusedFunction;
