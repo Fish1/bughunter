@@ -1,8 +1,10 @@
-import { ReactNode } from 'react';
+type myType = {} | null | undefined;
 
 function MyList() {
-  [null as ReactNode].map(column => {
+  [null as myType].map(column => {
     column?.toLocaleString;
     const aa = column;
   });
 }
+
+export default MyList;
